@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mama | A Celebration of Love</title>
+<meta name="description" content="A premium, personal birthday tribute for Mama — letters, memories, photos and love, all in one place.">
+<meta name="theme-color" content="#0B0B0B">
+
+<!-- Google Fonts: Playfair Display (display serif) + Cormorant Garamond (romantic accent) + Jost (clean body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- AOS - Animate On Scroll -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
+<!-- Swiper.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
+<!-- LightGallery -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- CUSTOM CURSOR GLOW (desktop only, decorative)  -->
+<!-- ============================================= -->
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ============================================= -->
+<!-- 1. PREMIUM LOADING SCREEN                      -->
+<!-- ============================================= -->
+<div id="loader" class="loader" role="status" aria-label="Loading">
+  <div class="loader-inner">
+    <span class="loader-heart">❤</span>
+    <p class="loader-text">preparing something beautiful<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+
+<!-- ============================================= -->
+<!-- AMBIENT BACKGROUND: stars + gradient glow      -->
+<!-- ============================================= -->
+<canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+<!-- Site wrapper (fades in after loader) -->
+<div id="site" class="site">
+
+  <!-- NAV -->
+  <header class="site-nav" data-aos="fade-down" data-aos-duration="1000">
+    <a href="#hero" class="nav-brand">Mama <span class="heart-accent">❤</span></a>
+    <nav aria-label="Section navigation">
+      <ul class="nav-links">
+        <li><a href="#letter">Letter</a></li>
+        <li><a href="#timeline">Memories</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#cake">Celebrate</a></li>
+        <li><a href="#wishes">Wishes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- 2. HERO SECTION                                -->
+  <!-- ============================================= -->
+  <section id="hero" class="hero">
+    <div class="hearts-field" id="hearts-field" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow" data-aos="fade-up">a lifetime of love, celebrated today</p>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="150">
+        Happy Birthday <span class="gold-text">Mama</span> <span class="heart-accent pulse">❤</span>
+      </h1>
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+        <span id="typed-subtitle"></span><span class="typed-cursor">|</span>
+      </p>
+
+      <div class="hero-cta-wrap" data-aos="fade-up" data-aos-delay="450">
+        <a href="#letter" class="btn btn-primary ripple">
+          <span>Begin the Celebration</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="#letter" class="scroll-indicator" aria-label="Scroll to next section">
+      <span class="scroll-mouse"><span class="scroll-dot"></span></span>
+      <span class="scroll-label">scroll</span>
+    </a>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 3. PERSONAL LETTER                             -->
+  <!-- ============================================= -->
+  <section id="letter" class="section letter-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">from my heart to yours</p>
+      <h2>A Letter For You</h2>
+    </div>
+
+    <div class="letter-stage" data-aos="zoom-in" data-aos-duration="900">
+      <div class="letter-card glass" id="letter-card">
+        <!-- paper opening effect: two flaps that open on scroll -->
+        <div class="letter-flap letter-flap-left" id="flap-left"></div>
+        <div class="letter-flap letter-flap-right" id="flap-right"></div>
+
+        <div class="letter-paper" id="letter-paper">
+          <p class="letter-salutation">My Dearest Mama,</p>
+          <p>
+            <!-- PLACEHOLDER TEXT: replace with your own personal birthday letter -->
+            There are not enough words in any language to hold everything you mean to me. From the very first
+            lullaby you sang, to every quiet sacrifice I never saw, you have been the steady heartbeat behind
+            every good thing in my life.
+          </p>
+          <p>
+            Thank you for your endless patience, your gentle strength, and the kind of love that asks for
+            nothing in return. Every lesson you taught me, every meal made with care, every late night spent
+            worrying about my future — I carry it all with me, always.
+          </p>
+          <p>
+            Today, I simply want you to feel as loved as you have made all of us feel, every single day.
+          </p>
+          <p class="letter-signoff">With all my love,<br><span class="gold-text">Your Child <br> Hammad</span></p><br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 4. MEMORY TIMELINE                             -->
+  <!-- ============================================= -->
+  <!-- <section id="timeline" class="section timeline-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">moments we'll never forget</p>
+      <h2>Our Memory Timeline</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" data-aos="fade-right" data-aos-duration="800">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass tilt-card">
+          <span class="timeline-year">1990</span>
+          <h3>Where It All Began</h3>
+          <p>The day our family truly started — full of hope, nerves, and so much love.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item timeline-item-right" data-aos="fade-left" data-aos-duration="800">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass tilt-card">
+          <span class="timeline-year">2001</span>
+          <h3>Sunday Mornings</h3>
+          <p>Pancakes, laughter, and the smell of your cooking filling up the whole house.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right" data-aos-duration="800">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass tilt-card">
+          <span class="timeline-year">2012</span>
+          <h3>Through Every Storm</h3>
+          <p>You held us together when things felt like they were falling apart.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item timeline-item-right" data-aos="fade-left" data-aos-duration="800">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass tilt-card">
+          <span class="timeline-year">Today</span>
+          <h3>Still Our Rock</h3>
+          <p>Still loving us louder than anyone else ever could.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ============================================= -->
+  <!-- 5. PHOTO GALLERY                               -->
+  <!-- ============================================= -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">a lifetime, in pictures</p>
+      <h2>Photo Gallery</h2>
+    </div>
+
+    <!--
+      GALLERY INSTRUCTIONS:
+      Replace the src/data-src of each <a> below with your own photos.
+      Keep the "lg-gallery" wrapper and data-lightgallery attributes intact.
+      Recommended image size: 800x1000px (portrait) or 1000x800 (landscape) for best masonry look.
+    -->
+    <div class="masonry-gallery" id="lg-gallery">
+      <a href="https://images.unsplash.com/photo-1541943869645-9b3fb9d1c8a8?w=900&q=80" class="gallery-item" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1541943869645-9b3fb9d1c8a8?w=500&q=60" alt="Family memory placeholder 1" loading="lazy">
+        <div class="gallery-overlay"><span>+</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=900&q=80" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=500&q=60" alt="Family memory placeholder 2" loading="lazy">
+        <div class="gallery-overlay"><span>+</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1495197359483-d092478c170a?w=900&q=80" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1495197359483-d092478c170a?w=500&q=60" alt="Family memory placeholder 3" loading="lazy">
+        <div class="gallery-overlay"><span>+</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=900&q=80" class="gallery-item" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=500&q=60" alt="Family memory placeholder 4" loading="lazy">
+        <div class="gallery-overlay"><span>+</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1543342384-1f1350e27861?w=900&q=80" class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1543342384-1f1350e27861?w=500&q=60" alt="Family memory placeholder 5" loading="lazy">
+        <div class="gallery-overlay"><span>+</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=900&q=80" class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500&q=60" alt="Family memory placeholder 6" loading="lazy">
+        <div class="gallery-overlay"><span>+</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 6. REASONS YOU'RE AMAZING                       -->
+  <!-- ============================================= -->
+  <section id="reasons" class="section reasons-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">just a few of countless reasons</p>
+      <h2>Why You're Amazing</h2>
+    </div>
+
+    <div class="reasons-grid">
+      <div class="reason-card glass tilt-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="reason-icon">❤</span>
+        <h3>Loving</h3>
+        <p>Your love wraps around every corner of our lives.</p>
+      </div>
+      <div class="reason-card glass tilt-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="reason-icon">🌹</span>
+        <h3>Caring</h3>
+        <p>You notice what everyone else misses, always.</p>
+      </div>
+      <div class="reason-card glass tilt-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="reason-icon">⭐</span>
+        <h3>Strong</h3>
+        <p>Quiet strength that holds our whole family up.</p>
+      </div>
+      <div class="reason-card glass tilt-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="reason-icon">😊</span>
+        <h3>Kind</h3>
+        <p>A kindness that never asks for anything back.</p>
+      </div>
+      <div class="reason-card glass tilt-card" data-aos="fade-up" data-aos-delay="400">
+        <span class="reason-icon">👑</span>
+        <h3>My Inspiration</h3>
+        <p>Everything good in me, I learned by watching you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 7. BIRTHDAY CAKE SECTION                        -->
+  <!-- ============================================= -->
+  <section id="cake" class="section cake-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">make a wish</p>
+      <h2>It's Cake Time</h2>
+    </div>
+
+    <div class="cake-stage" data-aos="zoom-in">
+      <div class="cake" id="cake">
+        <div class="candle-row">
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+          <div class="candle"><div class="flame"></div></div>
+        </div>
+        <div class="cake-layer cake-layer-top"><span class="cake-drip"></span></div>
+        <div class="cake-layer cake-layer-mid"></div>
+        <div class="cake-layer cake-layer-base"></div>
+        <div class="cake-plate"></div>
+      </div>
+    </div>
+
+    <button id="blow-btn" class="btn btn-primary ripple cake-btn">
+      <span>Blow the Candles</span>
+    </button>
+    <p id="cake-message" class="cake-message" aria-live="polite"></p>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 8. SURPRISE GIFT                                -->
+  <!-- ============================================= -->
+  <section id="gift" class="section gift-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">one more thing</p>
+      <h2>A Surprise For You</h2>
+    </div>
+
+    <div class="gift-stage" data-aos="zoom-in">
+      <button id="gift-box" class="gift-box" aria-label="Open your surprise gift">
+        <div class="gift-lid"></div>
+        <div class="gift-base"></div>
+        <div class="gift-ribbon-v"></div>
+        <div class="gift-ribbon-h"></div>
+        <div class="gift-bow">🎀</div>
+      </button>
+      <p class="gift-hint">tap the box to open</p>
+
+      <div class="gift-message glass" id="gift-message">
+        <p>You are, and always will be, the greatest gift our family has ever received.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 9. MUSIC PLAYER                                 -->
+  <!-- ============================================= -->
+  <section id="music" class="section music-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">a little something to set the mood</p>
+      <h2>Her Favorite Song</h2>
+    </div>
+
+    <div class="music-player glass" data-aos="fade-up">
+      <!--
+        MUSIC INSTRUCTIONS:
+        Replace assets/song.mp3 with your chosen audio file,
+        and replace the album-art background-image in style.css (.player-art) with a real photo.
+      -->
+      <audio id="audio" src="assets/song.mp3" preload="metadata"></audio>
+
+      <div class="player-art">
+        <div class="player-art-glow"></div>
+        <span class="player-note">♪</span>
+      </div>
+
+      <div class="player-info">
+        <h3 class="player-title">Mama's Song</h3>
+        <p class="player-artist">Replace with song &amp; artist name</p>
+
+        <div class="player-progress-wrap">
+          <span id="time-current" class="player-time">0:00</span>
+          <input type="range" id="progress" class="player-progress" value="0" min="0" max="100" step="0.1" aria-label="Song progress">
+          <span id="time-duration" class="player-time">0:00</span>
+        </div>
+
+        <div class="player-controls">
+          <button id="play-btn" class="player-play" aria-label="Play song">
+            <svg id="icon-play" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+            <svg id="icon-pause" viewBox="0 0 24 24" width="20" height="20" style="display:none"><path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+
+          <div class="player-volume">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="volume" class="player-progress" value="80" min="0" max="100" aria-label="Volume">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 10. VIDEO SECTION                               -->
+  <!-- ============================================= -->
+  <section id="video" class="section video-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">watch this, mama</p>
+      <h2>A Video Just For You</h2>
+    </div>
+
+    <!--
+      VIDEO INSTRUCTIONS:
+      Replace the src below with your own family video file (e.g. assets/family-video.mp4),
+      or swap this <video> tag for a YouTube/Vimeo <iframe> if hosting elsewhere.
+    -->
+    <div class="video-frame glass" data-aos="zoom-in">
+      <video controls poster="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1000&q=70" preload="none">
+        <source src="assets/family-video.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 11. WISHES SECTION                              -->
+  <!-- ============================================= -->
+  <section id="wishes" class="section wishes-section">
+    <div class="section-heading" data-aos="fade-up">
+      <p class="eyebrow">words from the ones who love you</p>
+      <h2>Wishes From The Family</h2>
+    </div>
+
+    <!-- PLACEHOLDER: edit slides below with real family wishes -->
+    <div class="swiper wishes-swiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="wish-card glass">
+            <span class="quote-mark">“</span>
+            <p>Happy Birthday Mama! Thank you for loving us so unconditionally, every single day.</p>
+            <span class="wish-author">— Your Daughter</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="wish-card glass">
+            <span class="quote-mark">“</span>
+            <p>You are the reason our home always feels warm. We love you more than words can say.</p>
+            <span class="wish-author">— Your Son</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="wish-card glass">
+            <span class="quote-mark">“</span>
+            <p>Sixty years young and still the most beautiful soul I know. Happy Birthday, my love.</p>
+            <span class="wish-author">— Your Husband</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="wish-card glass">
+            <span class="quote-mark">“</span>
+            <p>Grandma, you spoil us rotten and we wouldn't have it any other way. Love you!</p>
+            <span class="wish-author">— Your Grandchildren</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- 12. FINAL MESSAGE                               -->
+  <!-- ============================================= -->
+  <section id="final" class="section final-section">
+    <div class="final-glow" aria-hidden="true"></div>
+    <blockquote class="final-quote" data-aos="fade-up">
+      Every day with you is a blessing.<br>
+      Thank you for being the heart of our family.<br>
+      <span class="gold-text">Happy Birthday, Mama.</span>
+    </blockquote>
+
+    <button id="love-btn" class="btn btn-final ripple" data-aos="zoom-in" data-aos-delay="200">
+      <span>I Love You Mama ❤</span>
+    </button>
+  </section>
+
+  <footer class="site-footer">
+    <p>Made with <span class="heart-accent">❤</span> for the woman who gave us everything.</p>
+  </footer>
+
+</div><!-- /#site -->
+
+<!-- Fireworks / balloons canvas overlay for final section -->
+<canvas id="fireworks-canvas" aria-hidden="true"></canvas>
+<div id="balloon-field" class="balloon-field" aria-hidden="true"></div>
+
+<!-- ============================================= -->
+<!-- SCRIPTS                                        -->
+<!-- ============================================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
